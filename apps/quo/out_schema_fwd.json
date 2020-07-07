@@ -27,163 +27,287 @@
                         "DakotaResultsSampling"
                     ]
                 },
-                "spreadsheet": {
-                    "$id": "#/properties/uqResults/properties/spreadsheet",
-                    "type": "object",
-                    "title": "The spreadsheet schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "required": [
-                        "data",
-                        "headings",
-                        "numCol",
-                        "numRow"
-                    ],
-                    "additionalProperties": true,
-                    "properties": {
-                        "data": {
-                            "$id": "#/properties/uqResults/properties/spreadsheet/properties/data",
-                            "type": "array",
-                            "title": "The data schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "additionalItems": true,
-                            "items": {
-                                "anyOf": [
-                                    {
-                                        "$id": "#/properties/uqResults/properties/spreadsheet/properties/data/items/anyOf/0",
-                                        "type": "integer",
-                                        "title": "The first anyOf schema",
-                                        "description": "An explanation about the purpose of this instance."
-                                    },
-                                    {
-                                        "$id": "#/properties/uqResults/properties/spreadsheet/properties/data/items/anyOf/1",
-                                        "type": "number",
-                                        "title": "The second anyOf schema",
-                                        "description": "An explanation about the purpose of this instance."
-                                    }
-                                ],
-                                "$id": "#/properties/uqResults/properties/spreadsheet/properties/data/items"
+                "DakotaResultsSampling":{
+                    "spreadsheet": {
+                        "$id": "#/properties/uqResults/properties/spreadsheet",
+                        "type": "object",
+                        "title": "The spreadsheet schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "required": [
+                            "data",
+                            "headings",
+                            "numCol",
+                            "numRow"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "data": {
+                                "$id": "#/properties/uqResults/properties/spreadsheet/properties/data",
+                                "type": "array",
+                                "title": "The data schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/uqResults/properties/spreadsheet/properties/data/items/anyOf/0",
+                                            "type": "integer",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance."
+                                        },
+                                        {
+                                            "$id": "#/properties/uqResults/properties/spreadsheet/properties/data/items/anyOf/1",
+                                            "type": "number",
+                                            "title": "The second anyOf schema",
+                                            "description": "An explanation about the purpose of this instance."
+                                        }
+                                    ],
+                                    "$id": "#/properties/uqResults/properties/spreadsheet/properties/data/items"
+                                }
+                            },
+                            "headings": {
+                                "$id": "#/properties/uqResults/properties/spreadsheet/properties/headings",
+                                "type": "array",
+                                "title": "The headings schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/uqResults/properties/spreadsheet/properties/headings/items/anyOf/0",
+                                            "type": "string",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance."
+                                        }
+                                    ],
+                                    "$id": "#/properties/uqResults/properties/spreadsheet/properties/headings/items"
+                                }
+                            },
+                            "numCol": {
+                                "$id": "#/properties/uqResults/properties/spreadsheet/properties/numCol",
+                                "type": "integer",
+                                "title": "The numCol schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    7
+                                ]
+                            },
+                            "numRow": {
+                                "$id": "#/properties/uqResults/properties/spreadsheet/properties/numRow",
+                                "type": "integer",
+                                "title": "The numRow schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    200
+                                ]
                             }
-                        },
-                        "headings": {
-                            "$id": "#/properties/uqResults/properties/spreadsheet/properties/headings",
-                            "type": "array",
-                            "title": "The headings schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "additionalItems": true,
-                            "items": {
-                                "anyOf": [
-                                    {
-                                        "$id": "#/properties/uqResults/properties/spreadsheet/properties/headings/items/anyOf/0",
-                                        "type": "string",
-                                        "title": "The first anyOf schema",
-                                        "description": "An explanation about the purpose of this instance."
+                        }
+                    },
+                    "summary": {
+                        "$id": "#/properties/uqResults/properties/summary",
+                        "type": "array",
+                        "title": "The summary schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "$id": "#/properties/uqResults/properties/summary/items/anyOf/0",
+                                    "type": "object",
+                                    "title": "DakotaResultsSampling results",
+                                    "description": "DakotaResultsSampling QoI results object.",
+                                    "required": [
+                                        "kurtosis",
+                                        "mean",
+                                        "name",
+                                        "skewness",
+                                        "stdDev"
+                                    ],
+                                    "additionalProperties": true,
+                                    "properties": {
+                                        "kurtosis": {
+                                            "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/kurtosis",
+                                            "type": "number",
+                                            "title": "kurtosis",
+                                            "description": "computed kurtosis for QoI.",
+                                            "default": 0.0,
+                                            "examples": [
+                                                8.621865499706837
+                                            ]
+                                        },
+                                        "mean": {
+                                            "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/mean",
+                                            "type": "number",
+                                            "title": "mean",
+                                            "description": "computed mean for QoI.",
+                                            "default": 0.0,
+                                            "examples": [
+                                                -7.698628030009998
+                                            ]
+                                        },
+                                        "name": {
+                                            "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/name",
+                                            "type": "string",
+                                            "title": "QoI name",
+                                            "description": "QoI name.",
+                                            "examples": [
+                                                "Node_3_Disp_2"
+                                            ]
+                                        },
+                                        "skewness": {
+                                            "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/skewness",
+                                            "type": "number",
+                                            "title": "skewness",
+                                            "description": "computed skewness for QoI."
+                                        },
+                                        "stdDev": {
+                                            "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/stdDev",
+                                            "type": "number",
+                                            "title": "standard deviation",
+                                            "description": "computed standard deviation for QoI"
+                                        }
                                     }
-                                ],
-                                "$id": "#/properties/uqResults/properties/spreadsheet/properties/headings/items"
-                            }
-                        },
-                        "numCol": {
-                            "$id": "#/properties/uqResults/properties/spreadsheet/properties/numCol",
-                            "type": "integer",
-                            "title": "The numCol schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "default": 0,
-                            "examples": [
-                                7
-                            ]
-                        },
-                        "numRow": {
-                            "$id": "#/properties/uqResults/properties/spreadsheet/properties/numRow",
-                            "type": "integer",
-                            "title": "The numRow schema",
-                            "description": "An explanation about the purpose of this instance.",
-                            "default": 0,
-                            "examples": [
-                                200
-                            ]
+                                }
+                            ],
+                            "$id": "#/properties/uqResults/properties/summary/items"
                         }
                     }
                 },
-                "summary": {
-                    "$id": "#/properties/uqResults/properties/summary",
-                    "type": "array",
-                    "title": "The summary schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "additionalItems": true,
-                    "items": {
-                        "anyOf": [
-                            {
-                                "$id": "#/properties/uqResults/properties/summary/items/anyOf/0",
-                                "type": "object",
-                                "title": "DakotaResultsSampling results",
-                                "description": "DakotaResultsSampling QoI results object.",
-                                "required": [
-                                    "kurtosis",
-                                    "mean",
-                                    "name",
-                                    "skewness",
-                                    "stdDev"
-                                ],
-                                "additionalProperties": true,
-                                "properties": {
-                                    "kurtosis": {
-                                        "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/kurtosis",
-                                        "type": "number",
-                                        "title": "kurtosis",
-                                        "description": "computed kurtosis for QoI.",
-                                        "default": 0.0,
-                                        "examples": [
-                                            8.621865499706837
-                                        ]
-                                    },
-                                    "mean": {
-                                        "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/mean",
-                                        "type": "number",
-                                        "title": "mean",
-                                        "description": "computed mean for QoI.",
-                                        "default": 0.0,
-                                        "examples": [
-                                            -7.698628030009998
-                                        ]
-                                    },
-                                    "name": {
-                                        "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/name",
-                                        "type": "string",
-                                        "title": "QoI name",
-                                        "description": "QoI name.",
-                                        "examples": [
-                                            "Node_3_Disp_2"
-                                        ]
-                                    },
-                                    "skewness": {
-                                        "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/skewness",
-                                        "type": "number",
-                                        "title": "skewness",
-                                        "description": "computed skewness for QoI."
-                                    },
-                                    "stdDev": {
-                                        "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/stdDev",
-                                        "type": "number",
-                                        "title": "standard deviation",
-                                        "description": "computed standard deviation for QoI"
+                "DakotaResultsBayesianCalibration":{
+                    "general": {
+                        "$id": "#/properties/uqResults/properties/general",
+                        "type": "string",
+                        "title": "The general schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": ""
+                    },
+                    "spreadsheet": {
+                        "$id": "#/properties/uqResults/properties/spreadsheet",
+                        "type": "object",
+                        "title": "The spreadsheet schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "required": [
+                            "data",
+                            "headings",
+                            "numCol",
+                            "numRow"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "data": {
+                                "$id": "#/properties/uqResults/properties/spreadsheet/properties/data",
+                                "type": "array",
+                                "title": "The data schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/uqResults/properties/spreadsheet/properties/data/items/anyOf/0",
+                                            "type": "integer",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": 0
+                                        },
+                                        {
+                                            "$id": "#/properties/uqResults/properties/spreadsheet/properties/data/items/anyOf/1",
+                                            "type": "number",
+                                            "title": "The second anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": 0.0
+                                        }
+                                    ],
+                                    "$id": "#/properties/uqResults/properties/spreadsheet/properties/data/items"
+                                }
+                            },
+                            "headings": {
+                                "$id": "#/properties/uqResults/properties/spreadsheet/properties/headings",
+                                "type": "array",
+                                "title": "The headings schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": [],
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/properties/uqResults/properties/spreadsheet/properties/headings/items/anyOf/0",
+                                            "type": "string",
+                                            "title": "The first anyOf schema",
+                                            "description": "An explanation about the purpose of this instance.",
+                                            "default": ""
+                                        }
+                                    ],
+                                    "$id": "#/properties/uqResults/properties/spreadsheet/properties/headings/items"
+                                }
+                            },
+                            "numCol": {
+                                "$id": "#/properties/uqResults/properties/spreadsheet/properties/numCol",
+                                "type": "integer",
+                                "title": "The numCol schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0
+                            },
+                            "numRow": {
+                                "$id": "#/properties/uqResults/properties/spreadsheet/properties/numRow",
+                                "type": "integer",
+                                "title": "The numRow schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0
+                            }
+                        }
+                    },
+                    "summary": {
+                        "$id": "#/properties/uqResults/properties/summary",
+                        "type": "array",
+                        "title": "The summary schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "$id": "#/properties/uqResults/properties/summary/items/anyOf/0",
+                                    "type": "object",
+                                    "title": "The first anyOf schema",
+                                    "description": "An explanation about the purpose of this instance.",
+                                    "default": {},
+                                    "required": [
+                                        "mean",
+                                        "name",
+                                        "stdDev"
+                                    ],
+                                    "additionalProperties": true,
+                                    "properties": {
+                                        "mean": {
+                                            "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/mean",
+                                            "type": "number",
+                                            "title": "The mean schema",
+                                            "description": "An explanation about the purpose of this instance."
+                                        },
+                                        "name": {
+                                            "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/name",
+                                            "type": "string",
+                                            "title": "The name schema",
+                                            "description": "An explanation about the purpose of this instance."
+                                        },
+                                        "stdDev": {
+                                            "$id": "#/properties/uqResults/properties/summary/items/anyOf/0/properties/stdDev",
+                                            "type": "number",
+                                            "title": "The stdDev schema",
+                                            "description": "An explanation about the purpose of this instance."
+                                        }
                                     }
                                 }
-                            }
-                        ],
-                        "$id": "#/properties/uqResults/properties/summary/items"
+                            ],
+                            "$id": "#/properties/uqResults/properties/summary/items"
+                        }
                     }
                 }
             }
-        },
-        "workingDir": {
-            "$id": "#/properties/workingDir",
-            "type": "string",
-            "title": "The workingDir schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": [
-                "C:/Workdir/quoFEM"
-            ]
         }
     }
 }
