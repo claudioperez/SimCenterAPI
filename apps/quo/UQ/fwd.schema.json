@@ -1,0 +1,44 @@
+{
+    "Applications": {
+        "UQ": {
+            "Application": "Dakota-UQ",
+            "ApplicationData": {
+            }
+        }
+    },
+    "EDP": [
+        {
+            "name": ""
+        }
+    ],
+    "UQ_Method": {
+        "samplingMethodData": {
+            "dataMethod": "Quadrature",
+            "level": 5,
+            "method": "Polynomial Chaos Expansion",
+            "samplingMethod": "LHS",
+            "samplingSamples": 1000,
+            "samplingSeed": 249
+        },
+        "uqEngine": "Dakota",
+        "uqType": "Forward Propagation"
+    },
+    "fem": {
+        "dir": "",
+        "inputFile": "",
+        "mainInput": "",
+        "mainPostprocessScript": "",
+        "numInputs": 1,
+        "postprocessScript": "",
+        "program": "OpenSees"
+    },
+    "localAppDir": "C:/Users/claud/SimCenter/quoFEM",
+    "python": "C:\\Users\\claud\\Anaconda3\\python.exe",
+    "randomVariables": [
+    ],
+    "remoteAppDir": "/home1/00477/tg457427/SimCenterBackendApplications/May-2020",
+    "uqResults": {
+        "resultType": "NONE"
+    },
+    "workingDir": "C:/Users/claud/Documents/quoFEM/LocalWorkDir"
+}

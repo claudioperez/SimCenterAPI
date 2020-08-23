@@ -1,0 +1,41 @@
+{
+    "UQ_Method": {
+        "reliabilityMethodData": {
+            "integrationMethod": "Second Order",
+            "levelType": "Response Levels",
+            "localMethod": "Mean Value",
+            "method": "Local Reliability",
+            "mpp_Method": "u_taylor_mpp",
+            "probabilityLevel": [
+                0.02,
+                0.2,
+                0.4,
+                0.6,
+                0.8,
+                0.99
+            ]
+        },
+        "reliabilityMethodData": {
+            "integrationMethod": "Second Order",
+            "levelType": "Probability Levels",
+            "localMethod": "Most Probable Point",
+            "method": "Local Reliability",
+            "mpp_Method": "u_taylor_mpp",
+            "probabilityLevel": [
+                0.02,
+                0.2,
+                0.4,
+                0.6,
+                0.8,
+                0.99
+            ]
+        },
+        "reliabilityMethodData": {
+            "gpApproximation": "u-space",
+            "method": "Global Reliability",
+            "responseLevel": [
+                0
+            ]
+        }
+    }
+}
